@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class WhetherContent {
 	ConnDB cd = new ConnDB();

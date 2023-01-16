@@ -7,7 +7,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;
 
 public class GetApiData {
-	static ArrayList<HosVO> hosvo = new ArrayList<>();
+	protected ArrayList<HosVO> hosvo = new ArrayList<>();
 
 	public static String getTagvalue(String tag, Element eElement) {
 		NodeList nlList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
@@ -18,7 +18,7 @@ public class GetApiData {
 		return nValue.getNodeValue();
 	}
 
-	public static void getApiData() {
+	public void getApiData() {
 
 		try {
 			StringBuilder urlBuilder = new StringBuilder(

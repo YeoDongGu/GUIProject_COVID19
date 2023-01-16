@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import utillclass.ConnDB;
 import utillclass.RoundedButton;
 import whether.GugunComboBoxModel;
 import whether.SidoComboBoxModel;

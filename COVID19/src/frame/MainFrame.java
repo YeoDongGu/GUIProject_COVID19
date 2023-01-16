@@ -17,6 +17,7 @@ import hospital.Hos;
 import hospital.HosMkDb;
 import news.NewsMkDb;
 import news.NewsPanel;
+import utillclass.ConnDB;
 import utillclass.RoundedButton;
 import whether.WhetherMkDb;
 import whether.WhetherPanel;

@@ -10,7 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
-import frame.ConnDB;
+
+import utillclass.ConnDB;
 
 public class WhetherPanel {
 	ConnDB cd = new ConnDB();

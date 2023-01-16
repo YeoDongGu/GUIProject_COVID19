@@ -7,7 +7,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class NewsMkDb {
 	ConnDB cd = new ConnDB();

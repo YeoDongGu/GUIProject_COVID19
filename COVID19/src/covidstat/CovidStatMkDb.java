@@ -5,15 +5,16 @@ import java.util.*;
 
 import javax.swing.JOptionPane;
 
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class CovidStatMkDb {
 	ConnDB cd = new ConnDB();
+	GetCovidApiData gad = new GetCovidApiData();
 
 	public CovidStatMkDb() throws SQLException {
 
-		GetApiData.getApiData();
-		ArrayList<CovidStat> cs = GetApiData.covidstat;
+		gad.getApiData();
+		ArrayList<CovidStat> cs = gad.covidstat;
 		try {
 			cd.stmt.executeUpdate("drop table covidstat");
 

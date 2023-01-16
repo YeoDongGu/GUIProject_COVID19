@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import javax.swing.AbstractListModel;
 
 @SuppressWarnings("serial")
-public class AddressListModel extends AbstractListModel<String> {
+public class AddressListModel extends AbstractListModel<String>  {
 	private ArrayList<HosVO> addresses;
 
 	public AddressListModel(String strSido) throws ClassNotFoundException, SQLException {

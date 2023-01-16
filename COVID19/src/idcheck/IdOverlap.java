@@ -1,6 +1,5 @@
 package idcheck;
 
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,38 +10,39 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-public class IdOverlap extends JFrame implements ActionListener{
+public class IdOverlap implements ActionListener {
+	JFrame idoverlap = new JFrame();
 	JPanel background = new JPanel();
-	
+
 	JLabel message = new JLabel("ID가 중복됩니다! 다른 아이디를 설정해주세요.");
-	
+
 	JButton ok = new JButton("확인");
-	
+
 	public IdOverlap() {
-		setTitle("ID Succes");
-		setSize(270, 100);
-		setLocation(535, 300);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
+		idoverlap.setTitle("ID Succes");
+		idoverlap.setSize(270, 100);
+		idoverlap.setLocation(535, 300);
+		idoverlap.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
 		background.setLayout(null);
 		background.setBackground(Color.white);
-		
+
 		message.setBounds(20, 10, 300, 20);
-		
+
 		ok.setBounds(100, 40, 70, 30);
 		ok.addActionListener(this);
 
 		background.add(message);
 		background.add(ok);
-		
-		add(background);
-		
-		setVisible(true);
+
+		idoverlap.add(background);
+
+		idoverlap.setVisible(true);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		dispose();
+		idoverlap.dispose();
 	}
 }

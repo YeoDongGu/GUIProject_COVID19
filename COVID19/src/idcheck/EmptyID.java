@@ -9,18 +9,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class EmptyID extends JFrame implements ActionListener{
+public class EmptyID implements ActionListener {
+	JFrame emptyid = new JFrame();
 	JPanel background = new JPanel();
-
 	JLabel message = new JLabel("ID를 입력해주세요!");
-
 	JButton ok = new JButton("확인");
 
 	public EmptyID() {
-		setTitle("ID Empty!");
-		setSize(170, 100);
-		setLocation(585, 300);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		emptyid.setTitle("ID Empty!");
+		emptyid.setSize(170, 100);
+		emptyid.setLocation(585, 300);
+		emptyid.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 		background.setLayout(null);
 		background.setBackground(Color.white);
@@ -33,14 +32,14 @@ public class EmptyID extends JFrame implements ActionListener{
 		background.add(message);
 		background.add(ok);
 
-		add(background);
+		emptyid.add(background);
 
-		setVisible(true);
+		emptyid.setVisible(true);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		dispose();
+		emptyid.dispose();
 	}
 }

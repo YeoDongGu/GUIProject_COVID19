@@ -2,6 +2,8 @@ package frame;
 
 import java.util.ArrayList;
 
+import utillclass.ConnDB;
+
 public class LoginDAO {
 	ConnDB cd = new ConnDB();
 

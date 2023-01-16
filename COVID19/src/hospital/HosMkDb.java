@@ -1,19 +1,18 @@
 package hospital;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
-
-
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class HosMkDb {
 	ConnDB cd = new ConnDB();
+	GetApiData gad = new GetApiData();
 
 	public HosMkDb() throws SQLException {
 
-		GetApiData.getApiData();
-		ArrayList<HosVO> hv = GetApiData.hosvo;
+		gad.getApiData();
+		ArrayList<HosVO> hv = gad.hosvo;
 		try {
 			cd.stmt.executeUpdate("drop table Covid");
 			cd.stmt.executeUpdate("create table Covid(" + "sidoNm varchar2(100), " + "sgguNm varchar2(100), "

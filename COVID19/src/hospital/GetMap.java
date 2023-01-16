@@ -1,4 +1,4 @@
-package utillclass;
+package hospital;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;

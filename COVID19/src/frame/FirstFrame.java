@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import idcheck.EmptyID;
 import idcheck.IdOverlap;
 import idcheck.NoIdOverlap;
+import utillclass.ConnDB;
 
 public class FirstFrame implements ActionListener {
 	ConnDB cd = new ConnDB();

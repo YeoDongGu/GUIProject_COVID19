@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import utillclass.ConnDB;
+
 public class SignupDAO {
 	FirstFrame ff = new FirstFrame();
 	ConnDB cd = new ConnDB();

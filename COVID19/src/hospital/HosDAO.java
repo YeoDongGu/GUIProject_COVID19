@@ -3,8 +3,8 @@ package hospital;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import frame.ConnDB;
 import frame.LoginDAO;
+import utillclass.ConnDB;
 
 public class HosDAO extends LoginDAO {
 	ConnDB cd = new ConnDB();

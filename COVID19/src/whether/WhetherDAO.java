@@ -4,7 +4,7 @@ package whether;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class WhetherDAO {
 	ConnDB cd = new ConnDB();

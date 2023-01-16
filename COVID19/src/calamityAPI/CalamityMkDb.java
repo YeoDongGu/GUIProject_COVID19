@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class CalamityMkDb {
 	ConnDB cd = new ConnDB();

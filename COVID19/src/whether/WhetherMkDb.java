@@ -2,14 +2,16 @@ package whether;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import frame.ConnDB;
+
+import utillclass.ConnDB;
 
 public class WhetherMkDb {
 	ConnDB cd = new ConnDB();
+	GetApiData gad = new GetApiData();
 
 	public WhetherMkDb() throws SQLException {
-		GetApiData.getApiData();
-		ArrayList<WhetherVO> wh = GetApiData.whethervo;
+		gad.getApiData();
+		ArrayList<WhetherVO> wh = gad.whethervo;
 		try {
 
 			cd.stmt.executeUpdate("drop table Whether");

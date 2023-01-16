@@ -20,9 +20,8 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
-import frame.ConnDB;
 import frame.MainFrame;
-import utillclass.GetMap;
+import utillclass.ConnDB;
 /*
  코로나 병원 정보 패널
  */

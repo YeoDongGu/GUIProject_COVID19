@@ -12,12 +12,12 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class GetApiData {
-	static ArrayList<CovidStat> covidstat = new ArrayList<>();
-	static LocalDate now = LocalDate.now();
-	static LocalDate date = now;
+public class GetCovidApiData {
+	protected ArrayList<CovidStat> covidstat = new ArrayList<>();
+	private LocalDate now = LocalDate.now();
+	private LocalDate date = now;
 
-	public static String getTagvalue(String tag, Element eElement) {
+	public String getTagvalue(String tag, Element eElement) {
 		NodeList nlList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
 		Node nValue = (Node) nlList.item(0);
 		if (nValue == null) {
@@ -26,9 +26,9 @@ public class GetApiData {
 		return nValue.getNodeValue();
 	}
 
-	public static void getApiData() {
+	public void getApiData() {
 
-		int i = 0;
+//		int i = 0;
 //		String resion[] = { "합계", "서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "경기", "강원", "충북", "충남", "전북", "전남",
 //				"경북", "경남", "제주", "검역" };
 		while (true) {
@@ -63,7 +63,7 @@ public class GetApiData {
 					date = date.minusDays(1);
 					continue;
 				}
-				System.out.println(nList.getLength() +"개의 데이터 발견");
+				System.out.println(nList.getLength() + "개의 데이터 발견");
 				System.out.println(date);
 
 				for (int temp = 0; temp < nList.getLength(); temp++) {

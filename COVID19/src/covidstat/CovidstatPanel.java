@@ -11,7 +11,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumnModel;
 
-import frame.ConnDB;
+import utillclass.ConnDB;
 
 public class CovidstatPanel {
 	public JPanel covidstatp;
