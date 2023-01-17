@@ -10,12 +10,14 @@ import java.net.URLEncoder;
 import javax.swing.ImageIcon;
 
 public class GoogleAPI {
+	String imageURL;
+	URL url;
 	public void downloadMap(String location) {
 		try {
-			String imageURL = "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDERRnrswnrQZTQqgkViAhvd6Ltxco8SEY&center="
+			imageURL = "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDERRnrswnrQZTQqgkViAhvd6Ltxco8SEY&center="
 					+ URLEncoder.encode(location, "UTF-8") + "&zoom=16&size=612x612&scale=2";
 
-			URL url = new URL(imageURL);
+			url = new URL(imageURL);
 			InputStream is = url.openStream();
 			OutputStream os = new FileOutputStream(location);
 			byte[] b = new byte[2048];

@@ -1,10 +1,10 @@
 package hospital;
 
-public class FavTO {
+public class FavVO {
 	private String id;
 	private String hos_inf;
 
-	public FavTO() {
+	public FavVO() {
 		super();
 	}
 

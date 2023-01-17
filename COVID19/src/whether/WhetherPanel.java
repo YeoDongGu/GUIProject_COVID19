@@ -15,6 +15,7 @@ import utillclass.ConnDB;
 
 public class WhetherPanel {
 	ConnDB cd = new ConnDB();
+	WhetherContent wc = new WhetherContent();
 	private JList<String> list;
 	public JPanel wp;
 	public JPanel content;
@@ -50,28 +51,28 @@ public class WhetherPanel {
 				if (arg1.getStateChange() == ItemEvent.SELECTED) {
 					try {
 						if (content == null) {
-							list.setModel(new AddressListModel((String) comboBox1.getSelectedItem(),
+							list.setModel(new WhetherAddressListModel((String) comboBox1.getSelectedItem(),
 									(String) comboBox2.getSelectedItem()));
-							WhetherContent wt = new WhetherContent((String) comboBox2.getSelectedItem());
-							content = wt.ctp;
+							wc.startcontent((String) comboBox2.getSelectedItem());
+							content = wc.ctp;
 							wp.add(content);
 							wp.revalidate();
 							wp.repaint();
 						} else {
 							wp.remove(content);
-							list.setModel(new AddressListModel((String) comboBox1.getSelectedItem(),
+							list.setModel(new WhetherAddressListModel((String) comboBox1.getSelectedItem(),
 									(String) comboBox2.getSelectedItem()));
-							WhetherContent wt = new WhetherContent((String) comboBox2.getSelectedItem());
-							content = wt.ctp;
+							wc.startcontent((String) comboBox2.getSelectedItem());
+							content = wc.ctp;
 							wp.add(content);
 							wp.revalidate();
 							wp.repaint();
-							System.out.println(wt.pm10value);
-							System.out.println(wt.pm25value);
-							System.out.println(wt.no2value);
-							System.out.println(wt.o3value);
-							System.out.println(wt.covalue);
-							System.out.println(wt.so2value);
+							System.out.println(wc.pm10value);
+							System.out.println(wc.pm25value);
+							System.out.println(wc.no2value);
+							System.out.println(wc.o3value);
+							System.out.println(wc.covalue);
+							System.out.println(wc.so2value);
 						}
 					} catch (ClassNotFoundException | SQLException e) {
 						// TODO Auto-generated catch block
@@ -92,7 +93,7 @@ public class WhetherPanel {
 		scrollPane.setViewportView(list);
 
 		// 초기 시도 데이터 입력
-		comboBox1.setModel(new SidoComboBoxModel());
+		comboBox1.setModel(new WhetherSidoComboBoxModel());
 
 	}
 

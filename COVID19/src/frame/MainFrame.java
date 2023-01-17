@@ -12,8 +12,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JTabbedPane;
 import covidstat.CovidStatMkDb;
 import covidstat.CovidstatPanel;
-import hospital.Hos;
 import hospital.HosMkDb;
+import hospital.HosPanel;
 import news.NewsMkDb;
 import news.NewsPanel;
 import utillclass.ConnDB;
@@ -94,7 +94,7 @@ public class MainFrame implements ActionListener {
 
 	public void startframe() throws ClassNotFoundException, SQLException {
 		WhetherPanel w = new WhetherPanel();
-		Hos h = new Hos();
+		HosPanel h = new HosPanel();
 		NewsPanel n = new NewsPanel();
 		CovidstatPanel cs = new CovidstatPanel();
 		h.set(id, pwd, sido, dong);

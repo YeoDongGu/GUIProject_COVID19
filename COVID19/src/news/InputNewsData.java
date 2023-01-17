@@ -13,10 +13,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class GetApiData {
-	static ArrayList<NewsVO> newsvo = new ArrayList<>();
+public class InputNewsData {
+	ArrayList<NewsVO> newsvo = new ArrayList<>();
 
-	public static String getTagvalue(String tag, Element eElement) {
+	public String getTagvalue(String tag, Element eElement) {
 		NodeList nlList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
 		Node nValue = (Node) nlList.item(0);
 		if (nValue == null) {
@@ -25,7 +25,7 @@ public class GetApiData {
 		return nValue.getNodeValue();
 	}
 
-	public static void getApiData() throws ParserConfigurationException, SAXException, IOException {
+	public void getApiData() throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 //		Document doc = dBuilder.parse("C:/Users/Administrator/git/COVID_Information/COVID19/newsapi.xml");

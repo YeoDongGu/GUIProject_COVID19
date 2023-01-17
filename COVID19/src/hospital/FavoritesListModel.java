@@ -7,7 +7,7 @@ import javax.swing.AbstractListModel;
 
 @SuppressWarnings("serial")
 public class FavoritesListModel extends AbstractListModel<String> {
-	private ArrayList<FavTO> favorites;
+	private ArrayList<FavVO> favorites;
 
 	public FavoritesListModel(String favid) throws ClassNotFoundException, SQLException {
 		HosDAO dao = new HosDAO();
@@ -21,8 +21,8 @@ public class FavoritesListModel extends AbstractListModel<String> {
 
 	@Override
 	public String getElementAt(int index) {
-		FavTO to = favorites.get(index);
-		String favorites = String.format("%s", to.getHos_inf());
+		FavVO vo = favorites.get(index);
+		String favorites = String.format("%s", vo.getHos_inf());
 		return favorites;
 	}
 

@@ -7,7 +7,7 @@ import utillclass.ConnDB;
 
 public class WhetherMkDb {
 	ConnDB cd = new ConnDB();
-	GetApiData gad = new GetApiData();
+	GetWhetherApiData gad = new GetWhetherApiData();
 
 	public WhetherMkDb() throws SQLException {
 		gad.getApiData();

@@ -57,8 +57,8 @@ public class HosDAO extends LoginDAO {
 		return addresses;
 	}
 
-	public ArrayList<FavTO> listFavorites(String id) throws SQLException, ClassNotFoundException {
-		ArrayList<FavTO> favorites = new ArrayList<FavTO>();
+	public ArrayList<FavVO> listFavorites(String id) throws SQLException, ClassNotFoundException {
+		ArrayList<FavVO> favorites = new ArrayList<FavVO>();
 
 		// sql실행 및 sql결과 받아오기
 		String sql = "select id, hos_inf from favorites where id = ?";
@@ -66,7 +66,7 @@ public class HosDAO extends LoginDAO {
 		cd.pstmt.setString(1, id);
 		cd.rs = cd.pstmt.executeQuery();
 		while (cd.rs.next()) {
-			FavTO to = new FavTO();
+			FavVO to = new FavVO();
 			to.setId(cd.rs.getString("id"));
 			to.setHos_inf(cd.rs.getString("hos_inf"));
 			favorites.add(to);

@@ -25,7 +25,7 @@ import utillclass.ConnDB;
 /*
  코로나 병원 정보 패널
  */
-public class Hos implements MouseListener, ActionListener {
+public class HosPanel implements MouseListener, ActionListener {
 	MainFrame mf = new MainFrame();
 	private JList<String> list;
 	public JPanel hp;
@@ -44,7 +44,7 @@ public class Hos implements MouseListener, ActionListener {
 	public String sido;
 	public String dong;
 
-	public Hos() throws ClassNotFoundException, SQLException {
+	public HosPanel() throws ClassNotFoundException, SQLException {
 		hp = new JPanel();
 		hp.setBackground(Color.white);
 		hp.setLayout(null);
@@ -60,7 +60,7 @@ public class Hos implements MouseListener, ActionListener {
 			public void itemStateChanged(ItemEvent arg0) {
 				if (arg0.getStateChange() == ItemEvent.SELECTED) {
 					try {
-						list.setModel(new AddressListModel((String) comboBox1.getSelectedItem()));
+						list.setModel(new HosAddressListModel((String) comboBox1.getSelectedItem()));
 					} catch (ClassNotFoundException | SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -98,7 +98,7 @@ public class Hos implements MouseListener, ActionListener {
 		list.setFont(font1);
 
 		// 초기 시도 데이터 입력
-		comboBox1.setModel(new SidoComboBoxModel());
+		comboBox1.setModel(new HosSidoComboBoxModel());
 	}
 
 	public void set(String id, String pwd, String sido, String dong) {
@@ -195,6 +195,5 @@ public class Hos implements MouseListener, ActionListener {
 			}
 
 		}
-
 	}
 }

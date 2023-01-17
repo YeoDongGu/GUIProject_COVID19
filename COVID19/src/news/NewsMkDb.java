@@ -11,17 +11,18 @@ import utillclass.ConnDB;
 
 public class NewsMkDb {
 	ConnDB cd = new ConnDB();
+	InputNewsData Ind = new InputNewsData();
 
 	public NewsMkDb() throws SQLException {
 		new NewsAPIget();
 		try {
-			GetApiData.getApiData();
+			Ind.getApiData();
 		} catch (ParserConfigurationException | SAXException | IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
-		ArrayList<NewsVO> n = GetApiData.newsvo;
+		ArrayList<NewsVO> n = Ind.newsvo;
 		try {
 			cd.stmt.executeUpdate("drop table news");
 			cd.stmt.executeUpdate("create table news(" + "title varchar2(1000), " + "originallink varchar2(1000), "

@@ -6,10 +6,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;
 
-public class GetApiData {
+public class GetWhetherApiData {
 	protected ArrayList<WhetherVO> whethervo = new ArrayList<>();
 
-	public static String getTagvalue(String tag, Element eElement) {
+	public String getTagvalue(String tag, Element eElement) {
 		NodeList nlList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
 		Node nValue = (Node) nlList.item(0);
 		if (nValue == null) {

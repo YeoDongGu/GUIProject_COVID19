@@ -17,7 +17,8 @@ import utillclass.JTextFieldLimit;
 import utillclass.NumberField;
 import utillclass.RoundedButton;
 import whether.GugunComboBoxModel;
-import whether.SidoComboBoxModel;
+import whether.WhetherSidoComboBoxModel;
+
 
 public class SignupPanel {
 	JPanel sp = new JPanel();
@@ -122,7 +123,7 @@ public class SignupPanel {
 		comboBox2.setBounds(220, 385, 115, 30);
 
 		try {
-			comboBox1.setModel(new SidoComboBoxModel());
+			comboBox1.setModel(new WhetherSidoComboBoxModel());
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -139,7 +140,6 @@ public class SignupPanel {
 		sp.add(pwText); 
 		sp.add(nnText);
 		sp.add(rsidText);
-//		sp.add(addText);
 		sp.add(comboBox1);
 		sp.add(comboBox2);
 		sp.add(buttonPanel);

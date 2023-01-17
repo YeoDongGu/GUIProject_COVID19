@@ -7,12 +7,12 @@ import utillclass.ConnDB;
 
 public class HosMkDb {
 	ConnDB cd = new ConnDB();
-	GetApiData gad = new GetApiData();
-
+	GetHosApiData gad = new GetHosApiData();
+	ArrayList<HosVO> hv;
 	public HosMkDb() throws SQLException {
 
 		gad.getApiData();
-		ArrayList<HosVO> hv = gad.hosvo;
+		hv = gad.hosvo;
 		try {
 			cd.stmt.executeUpdate("drop table Covid");
 			cd.stmt.executeUpdate("create table Covid(" + "sidoNm varchar2(100), " + "sgguNm varchar2(100), "

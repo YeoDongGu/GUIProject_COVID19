@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 import utillclass.ConnDB;
 import utillclass.RoundedButton;
 import whether.GugunComboBoxModel;
-import whether.SidoComboBoxModel;
+import whether.WhetherSidoComboBoxModel;
 
 public class Edit implements ActionListener {
 	ConnDB cd = new ConnDB();
@@ -96,7 +96,7 @@ public class Edit implements ActionListener {
 		comboBox2.setBounds(185, 215, 115, 30);
 
 		try {
-			comboBox1.setModel(new SidoComboBoxModel());
+			comboBox1.setModel(new WhetherSidoComboBoxModel());
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

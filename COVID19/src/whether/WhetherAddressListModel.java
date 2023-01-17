@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import javax.swing.AbstractListModel;
 
 @SuppressWarnings("serial")
-public class AddressListModel extends AbstractListModel<String> {
+public class WhetherAddressListModel extends AbstractListModel<String> {
 	private ArrayList<WhetherVO> addresses;
 
-	public AddressListModel(String strSido, String strGugun) throws ClassNotFoundException, SQLException {
+	public WhetherAddressListModel(String strSido, String strGugun) throws ClassNotFoundException, SQLException {
 		WhetherDAO dao = new WhetherDAO();
 		addresses = dao.listAddress(strSido, strGugun);
 	}

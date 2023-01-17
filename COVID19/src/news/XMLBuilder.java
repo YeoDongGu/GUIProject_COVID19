@@ -17,7 +17,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 public class XMLBuilder {
-	public static void buildXML(final String name, final String source) {
+	public void buildXML(final String name, final String source) {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();

@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 
 @SuppressWarnings("serial")
-public class SidoComboBoxModel extends DefaultComboBoxModel<String> {
+public class HosSidoComboBoxModel extends DefaultComboBoxModel<String> {
 	private ArrayList<HosVO> sidos;
 
-	public SidoComboBoxModel() throws ClassNotFoundException, SQLException {
+	public HosSidoComboBoxModel() throws ClassNotFoundException, SQLException {
 		HosDAO dao = new HosDAO();
 		sidos = dao.listSido();
 	}

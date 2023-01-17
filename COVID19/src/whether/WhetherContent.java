@@ -47,7 +47,7 @@ public class WhetherContent {
 	String coGrade;
 	String so2Grade;
 
-	public WhetherContent(String stnm) throws SQLException {
+	public void startcontent(String stnm) throws SQLException {
 		String sql = "select sidonm, stationname, pm10value, pm25value,no2value, o3value, covalue, so2value, pm10Grade, pm25Grade, no2Grade, o3Grade, coGrade, so2Grade, datatime from whether where stationname like ?";
 		cd.pstmt = cd.con.prepareStatement(sql);
 		cd.pstmt.setString(1, stnm + "%");
@@ -133,7 +133,7 @@ public class WhetherContent {
 		mainpm10imglabel.setHorizontalAlignment(JLabel.CENTER);
 		pm10.add(mainpm10imglabel);
 
-		mainpm10imglabel.setIcon(imgset.goodIcon);
+		mainpm10imglabel.setIcon(imgset.good);
 		JLabel grade = new JLabel();
 		JLabel ment = new JLabel();
 		JLabel value = new JLabel(pm10value + " ug/m");
@@ -153,23 +153,23 @@ public class WhetherContent {
 		pm10.add(grade);
 
 		if (pm10Grade.charAt(0) == '1') {
-			mainpm10imglabel.setIcon(imgset.good2Icon);
+			mainpm10imglabel.setIcon(imgset.good2);
 			grade.setText("좋음");
 			ment.setText("환기하기 좋은날!");
 		} else if (pm10Grade.charAt(0) == '2') {
-			mainpm10imglabel.setIcon(imgset.goodIcon);
+			mainpm10imglabel.setIcon(imgset.good);
 			grade.setText("보통");
 			ment.setText("외출시 마스크 착용!");
 		} else if (pm10Grade.charAt(0) == '3') {
-			mainpm10imglabel.setIcon(imgset.badIcon);
+			mainpm10imglabel.setIcon(imgset.bad);
 			grade.setText("나쁨");
 			ment.setText("외출은 자제해요~");
 		} else if (pm10Grade.charAt(0) == '4') {
-			mainpm10imglabel.setIcon(imgset.bad2Icon);
+			mainpm10imglabel.setIcon(imgset.bad2);
 			grade.setText("매우나쁨");
 			ment.setText("절대 나가지마세요!");
 		} else {
-			mainpm10imglabel.setIcon(imgset.nullIcon);
+			mainpm10imglabel.setIcon(imgset.nullimg);
 			ment.setText("정보가 없습니다");
 		}
 
@@ -193,19 +193,19 @@ public class WhetherContent {
 		pm25.add(grade2);
 
 		if (pm25Grade.charAt(0) == '1') {
-			pm25imglabel.setIcon(imgset.good2Icon);
+			pm25imglabel.setIcon(imgset.good2);
 			grade2.setText("좋음");
 		} else if (pm25Grade.charAt(0) == '2') {
-			pm25imglabel.setIcon(imgset.goodIcon);
+			pm25imglabel.setIcon(imgset.good);
 			grade2.setText("보통");
 		} else if (pm25Grade.charAt(0) == '3') {
-			pm25imglabel.setIcon(imgset.badIcon);
+			pm25imglabel.setIcon(imgset.bad);
 			grade2.setText("나쁨");
 		} else if (pm25Grade.charAt(0) == '4') {
-			pm25imglabel.setIcon(imgset.bad2Icon);
+			pm25imglabel.setIcon(imgset.bad2);
 			grade2.setText("매우나쁨");
 		} else {
-			pm25imglabel.setIcon(imgset.nullIcon);
+			pm25imglabel.setIcon(imgset.nullimg);
 			grade2.setText("없음");
 		}
 
@@ -227,19 +227,19 @@ public class WhetherContent {
 		no2.add(grade3);
 
 		if (no2Grade.charAt(0) == '1') {
-			no2imglabel.setIcon(imgset.good2Icon);
+			no2imglabel.setIcon(imgset.good2);
 			grade3.setText("좋음");
 		} else if (no2Grade.charAt(0) == '2') {
-			no2imglabel.setIcon(imgset.goodIcon);
+			no2imglabel.setIcon(imgset.good);
 			grade3.setText("보통");
 		} else if (no2Grade.charAt(0) == '3') {
-			no2imglabel.setIcon(imgset.badIcon);
+			no2imglabel.setIcon(imgset.bad);
 			grade3.setText("나쁨");
 		} else if (no2Grade.charAt(0) == '4') {
-			no2imglabel.setIcon(imgset.bad2Icon);
+			no2imglabel.setIcon(imgset.bad2);
 			grade3.setText("매우나쁨");
 		} else {
-			no2imglabel.setIcon(imgset.nullIcon);
+			no2imglabel.setIcon(imgset.nullimg);
 			grade3.setText("없음");
 		}
 
@@ -261,19 +261,19 @@ public class WhetherContent {
 		o3.add(grade4);
 
 		if (o3Grade.charAt(0) == '1') {
-			o3imglabel.setIcon(imgset.good2Icon);
+			o3imglabel.setIcon(imgset.good2);
 			grade4.setText("좋음");
 		} else if (o3Grade.charAt(0) == '2') {
-			o3imglabel.setIcon(imgset.goodIcon);
+			o3imglabel.setIcon(imgset.good);
 			grade4.setText("보통");
 		} else if (o3Grade.charAt(0) == '3') {
-			o3imglabel.setIcon(imgset.badIcon);
+			o3imglabel.setIcon(imgset.bad);
 			grade4.setText("나쁨");
 		} else if (o3Grade.charAt(0) == '4') {
-			o3imglabel.setIcon(imgset.bad2Icon);
+			o3imglabel.setIcon(imgset.bad2);
 			grade4.setText("매우나쁨");
 		} else {
-			o3imglabel.setIcon(imgset.nullIcon);
+			o3imglabel.setIcon(imgset.nullimg);
 			grade4.setText("없음");
 		}
 

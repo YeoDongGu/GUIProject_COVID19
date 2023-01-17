@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 
 @SuppressWarnings("serial")
-public class SidoComboBoxModel extends DefaultComboBoxModel<String> {
+public class WhetherSidoComboBoxModel extends DefaultComboBoxModel<String> {
 	private ArrayList<WhetherVO> sidos;
 
 	
-	public SidoComboBoxModel() throws ClassNotFoundException, SQLException {
+	public WhetherSidoComboBoxModel() throws ClassNotFoundException, SQLException {
 		WhetherDAO dao = new WhetherDAO();
 		sidos = dao.listSido();
 	}
