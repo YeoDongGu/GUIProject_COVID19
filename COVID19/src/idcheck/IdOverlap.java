@@ -9,7 +9,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
 public class IdOverlap implements ActionListener {
 	JFrame idoverlap = new JFrame();
 	JPanel background = new JPanel();

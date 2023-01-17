@@ -8,6 +8,10 @@ import javax.swing.*;
  텍스트필드 숫자만 쓸수있게 제한
  */
 public class NumberField extends JTextField implements KeyListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	char c;
 	public NumberField() {
 		addKeyListener(this);

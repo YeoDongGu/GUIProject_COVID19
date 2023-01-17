@@ -22,7 +22,7 @@ public class WhetherContent {
 
 	JLabel sido;
 	JLabel dtlabel;
-	
+
 	JLabel mainpm10imglabel;
 	JLabel pm10imglabel;
 	JLabel pm25imglabel;
@@ -127,7 +127,7 @@ public class WhetherContent {
 		ctp.add(dtlabel);
 
 		// 메인 미세먼지 정보
-		imgset.mainimage();
+		imgset.setImg(150, 150);
 		mainpm10imglabel = new JLabel();
 		mainpm10imglabel.setBounds(60, 20, 150, 150);
 		mainpm10imglabel.setHorizontalAlignment(JLabel.CENTER);
@@ -174,7 +174,7 @@ public class WhetherContent {
 		}
 
 		// 서브 대기오염정보 3개
-		imgset.subimage();
+		imgset.setImg(70, 70);
 		pm25imglabel = new JLabel();
 		pm25imglabel.setBounds(35, 20, 70, 70);
 		pm25imglabel.setHorizontalAlignment(JLabel.CENTER);

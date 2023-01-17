@@ -2,9 +2,6 @@ package covidstat;
 
 import java.sql.*;
 import java.util.*;
-
-import javax.swing.JOptionPane;
-
 import utillclass.ConnDB;
 
 public class CovidStatMkDb {

@@ -12,8 +12,8 @@ import javax.swing.JTextField;
 import utillclass.JTextFieldLimit;
 import utillclass.RoundedButton;
 
-@SuppressWarnings("serial")
-public class LoginPanel extends JPanel {
+public class LoginPanel {
+	JPanel loginPanel = new JPanel();
 	JPanel buttonPanel = new JPanel();
 
 	JLabel title = new JLabel("Login");
@@ -27,8 +27,8 @@ public class LoginPanel extends JPanel {
 	RoundedButton no = new RoundedButton("취소");
 
 	LoginPanel() {
-		setBackground(new Color(28,228,251));
-		setLayout(null);
+		loginPanel.setBackground(new Color(28, 228, 251));
+		loginPanel.setLayout(null);
 
 		ok.setC(new Color(3, 199, 90));
 		ok.setO(Color.white);
@@ -59,17 +59,18 @@ public class LoginPanel extends JPanel {
 		pwText.setDocument((new JTextFieldLimit(12)));
 
 		buttonPanel.setLayout(new GridLayout(1, 2));
-		buttonPanel.setBackground(new Color(28,228,251));
+		buttonPanel.setBackground(new Color(28, 228, 251));
 		buttonPanel.setBounds(105, 410, 230, 40);
 		buttonPanel.add(ok);
 		buttonPanel.add(no);
 
-		add(title);
-		add(id);
-		add(password);
-		add(idText);
-		add(pwText);
-		add(buttonPanel);
+		loginPanel.add(title);
+		loginPanel.add(id);
+		loginPanel.add(password);
+		loginPanel.add(idText);
+		loginPanel.add(pwText);
+		loginPanel.add(buttonPanel);
+
 	}
 
 }

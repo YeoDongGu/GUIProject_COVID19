@@ -21,48 +21,25 @@ public class ImageSetting {
 		super();
 	}
 
-	public void subimage() {
+	public void setImg(int x, int y) {
 		Image img = bad.getImage();
-		Image updatebad = img.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		Image updatebad = img.getScaledInstance(x, y, Image.SCALE_SMOOTH);
 		badIcon = new ImageIcon(updatebad);
 
 		Image img2 = bad2.getImage();
-		Image updatebad2 = img2.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		Image updatebad2 = img2.getScaledInstance(x, y, Image.SCALE_SMOOTH);
 		bad2Icon = new ImageIcon(updatebad2);
 
 		Image img3 = good.getImage();
-		Image updategood = img3.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		Image updategood = img3.getScaledInstance(x, y, Image.SCALE_SMOOTH);
 		goodIcon = new ImageIcon(updategood);
 
 		Image img4 = good2.getImage();
-		Image updategood2 = img4.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		Image updategood2 = img4.getScaledInstance(x, y, Image.SCALE_SMOOTH);
 		good2Icon = new ImageIcon(updategood2);
 
 		Image img5 = nullimg.getImage();
-		Image updatenull = img5.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+		Image updatenull = img5.getScaledInstance(x, y, Image.SCALE_SMOOTH);
 		nullIcon = new ImageIcon(updatenull);
-	}
-
-	public void mainimage() {
-		Image img = bad.getImage();
-		Image updatebad = img.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
-		badIcon = new ImageIcon(updatebad);
-
-		Image img2 = bad2.getImage();
-		Image updatebad2 = img2.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
-		bad2Icon = new ImageIcon(updatebad2);
-
-		Image img3 = good.getImage();
-		Image updategood = img3.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
-		goodIcon = new ImageIcon(updategood);
-
-		Image img4 = good2.getImage();
-		Image updategood2 = img4.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
-		good2Icon = new ImageIcon(updategood2);
-
-		Image img5 = nullimg.getImage();
-		Image updatenull = img5.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
-		nullIcon = new ImageIcon(updatenull);
-
 	}
 }

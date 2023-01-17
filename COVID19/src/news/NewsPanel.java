@@ -23,11 +23,12 @@ import utillclass.ConnDB;
 public class NewsPanel {
 	ConnDB cd = new ConnDB();
 	public JPanel np;
-	public JPanel np2;
-	private JLabel[][] contentlabel = new JLabel[10][4];
-	private JLabel[] empty = new JLabel[9];
+	public JPanel ncp;
 
-	String contents[][] = new String[10][4];
+	private JLabel[][] contentlabel = new JLabel[100][4];
+	private JLabel[] empty = new JLabel[99];
+
+	String contents[][] = new String[100][4];
 	String str[] = { "title", "description", "link", "pubdate" };
 
 	public JScrollPane scrollPane;
@@ -41,11 +42,11 @@ public class NewsPanel {
 		np.setLayout(null);
 		np.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-		np2 = new JPanel();
-		np2.setBackground(Color.white);
-		np2.setLayout(new GridLayout(49, 0));
+		ncp = new JPanel();
+		ncp.setBackground(Color.white);
+		ncp.setLayout(new GridLayout(499, 0));
 
-		scrollPane = new JScrollPane(np2);
+		scrollPane = new JScrollPane(ncp);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS); // 스크롤바가 언제생기는지 설정 . 항상
 		scrollPane.setBounds(0, 0, 590, 680);
 		scrollPane.getVerticalScrollBar().setUnitIncrement(16); // 스크롤 속도
@@ -79,12 +80,13 @@ public class NewsPanel {
 		}
 
 		//
+
 		for (int i = 0; i < contentlabel.length; i++) {
 			for (int j = 0; j < contentlabel[i].length; j++) {
-				np2.add(contentlabel[i][j]);
+				ncp.add(contentlabel[i][j]);
 			}
-			if (i < 9) {
-				np2.add(empty[i]);
+			if (i < 99) {
+				ncp.add(empty[i]);
 			}
 		}
 

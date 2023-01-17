@@ -10,7 +10,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JTabbedPane;
-import calamityAPI.CalamityMkDb;
 import covidstat.CovidStatMkDb;
 import covidstat.CovidstatPanel;
 import hospital.Hos;
@@ -33,7 +32,6 @@ public class MainFrame implements ActionListener {
 	private JMenuItem mcovidhos;
 	private JMenuItem mcovidstat;
 	private JMenuItem mwhether;
-	private JMenuItem mcalamity;
 	private JMenuItem mnews;
 
 	private JFrame mf;
@@ -60,7 +58,6 @@ public class MainFrame implements ActionListener {
 		mcovidhos = new JMenuItem("코로나 진료병원");
 		mcovidstat = new JMenuItem("코로나현황");
 		mwhether = new JMenuItem("미세먼지");
-		mcalamity = new JMenuItem("재난문자");
 		mnews = new JMenuItem("뉴스");
 
 		refresh = new RoundedButton("새로고침");
@@ -111,14 +108,15 @@ public class MainFrame implements ActionListener {
 		w.comboBox1.setSelectedItem(sido); // 로그인한 회원의 주소를 받아와서 첫화면으로 설정
 		w.comboBox2.setSelectedItem(dong); // 로그인한 회원의 주소를 받아와서 첫화면으로 설정
 		user.setText("<html><body style='text-align:center;'>안녕하세요<br />" + name + "님 <br /> 환영합니다</body></html>");
+		TabImage ti = new TabImage(25, 25);
 
-		t.addTab("코로나 현황", cs.covidstatp);
-		t.setBackgroundAt(0, Color.RED);
-		t.addTab("코로나 진료병원", h.hp);
+		t.addTab("코로나 현황", ti.covid, cs.covidstatp);
+		t.setBackgroundAt(0, Color.white);
+		t.addTab("코로나 진료병원", ti.hos, h.hp);
 		t.setBackgroundAt(1, Color.green);
-		t.addTab("미세먼지", w.wp);
+		t.addTab("미세먼지", ti.dust, w.wp);
 		t.setBackgroundAt(2, Color.CYAN);
-		t.addTab("코로나 뉴스", n.np);
+		t.addTab("코로나 뉴스", ti.news, n.np);
 		t.setBackgroundAt(3, Color.PINK);
 
 		mf.add(t);
@@ -132,13 +130,11 @@ public class MainFrame implements ActionListener {
 		update.add(mcovidhos);
 		update.add(mcovidstat);
 		update.add(mwhether);
-		update.add(mcalamity);
 		update.add(mnews);
 
 		mcovidhos.addActionListener(this);
 		mcovidstat.addActionListener(this);
 		mwhether.addActionListener(this);
-		mcalamity.addActionListener(this);
 		mnews.addActionListener(this);
 		refresh.addActionListener(this);
 		logout.addActionListener(this);
@@ -168,13 +164,6 @@ public class MainFrame implements ActionListener {
 		} else if (mwhether.equals(e.getSource())) {
 			try {
 				new WhetherMkDb();
-			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-		} else if (mcalamity.equals(e.getSource())) {
-			try {
-				new CalamityMkDb();
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -221,4 +210,5 @@ public class MainFrame implements ActionListener {
 		this.sido = sido;
 		this.dong = dong;
 	}
+
 }

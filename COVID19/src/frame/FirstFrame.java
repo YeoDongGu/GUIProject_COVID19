@@ -143,11 +143,11 @@ public class FirstFrame implements ActionListener {
 			fad.setVisible(false);
 		} else if (first.login.equals(e.getSource())) {
 			sf.remove(first.Init);
-			sf.add(logindisplay);
+			sf.add(logindisplay.loginPanel);
 			sf.revalidate();
 			sf.repaint();
 		} else if (logindisplay.no.equals(e.getSource())) {
-			sf.remove(logindisplay);
+			sf.remove(logindisplay.loginPanel);
 			sf.add(first.Init);
 			sf.revalidate();
 			sf.repaint();
