@@ -18,8 +18,8 @@ import utillclass.NumberField;
 import utillclass.RoundedButton;
 
 public class DeleteAc implements ActionListener {
-	ConnDB cd = new ConnDB();
-	MainFrame mf = new MainFrame();
+	private ConnDB cd = new ConnDB();
+	private MainFrame mf = new MainFrame();
 	private JFrame delac;
 	private JLabel lid = new JLabel("접속중인 ID");
 	private JLabel lpassword = new JLabel("PASSWORD");
@@ -34,12 +34,12 @@ public class DeleteAc implements ActionListener {
 	private RoundedButton del;
 	private RoundedButton cancel;
 
-	String id;
-	String pwd;
-	String rsid;
-	String name;
-	String sido;
-	String dong;
+	private String id;
+	private String pwd;
+	private String rsid;
+	private String name;
+	private String sido;
+	private String dong;
 
 	public DeleteAc() {
 		delac = new JFrame("회원탈퇴");

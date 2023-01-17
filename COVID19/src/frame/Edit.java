@@ -20,8 +20,8 @@ import whether.GugunComboBoxModel;
 import whether.WhetherSidoComboBoxModel;
 
 public class Edit implements ActionListener {
-	ConnDB cd = new ConnDB();
-	MainFrame mf = new MainFrame();
+	private ConnDB cd = new ConnDB();
+	private MainFrame mf = new MainFrame();
 	private JFrame edit;
 	private RoundedButton bid = new RoundedButton("ID");
 	private RoundedButton bpassword = new RoundedButton("PASSWORD");
@@ -36,12 +36,12 @@ public class Edit implements ActionListener {
 	private RoundedButton ed;
 	private RoundedButton cancel;
 
-	String id;
-	String pwd;
-	String rsid;
-	String name;
-	String sido;
-	String dong;
+	private String id;
+	private String pwd;
+	private String rsid;
+	private String name;
+	private String sido;
+	private String dong;
 	public Edit() {
 		
 	}

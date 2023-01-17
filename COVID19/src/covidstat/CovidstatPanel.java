@@ -17,11 +17,10 @@ public class CovidstatPanel {
 	public JPanel covidstatp;
 	public JTable jt;
 
-	ConnDB cd = new ConnDB();
-	String sum[] = new String[6];
-	String contents[][] = new String[19][6];
-	String str[] = { "gubun", "incdec", "localocccnt", "overflowcnt", "qurrate", "stdday" };
-	String header[] = { "시/도", "확진자", "지역 발생수", "해외 유입수", "10만명당 확진", "기준 일자" };
+	private ConnDB cd = new ConnDB();
+	private String contents[][] = new String[19][6];
+	private String str[] = { "gubun", "incdec", "localocccnt", "overflowcnt", "qurrate", "stdday" };
+	private String header[] = { "시/도", "확진자", "지역 발생수", "해외 유입수", "10만명당 확진", "기준 일자" };
 
 	public CovidstatPanel() {
 		dataInp();

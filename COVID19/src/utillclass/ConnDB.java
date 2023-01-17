@@ -8,10 +8,10 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class ConnDB {
-	String driver = "oracle.jdbc.driver.OracleDriver";
-	String url = "jdbc:oracle:thin:@localhost:1521/xe";
-	String user = "c##nanovia3";
-	String password = "ehdrn1";
+	public String driver = "oracle.jdbc.driver.OracleDriver";
+	public String url = "jdbc:oracle:thin:@localhost:1521/xe";
+	public String user = "c##nanovia3";
+	public String password = "ehdrn1";
 
 	public Connection con = null;
 	public Statement stmt = null;

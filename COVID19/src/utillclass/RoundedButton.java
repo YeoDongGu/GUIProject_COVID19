@@ -13,8 +13,8 @@ import javax.swing.JButton;
 
 @SuppressWarnings("serial")
 public class RoundedButton extends JButton {
-	Color c;
-	Color o;
+	private Color c;
+	private Color o;
 
 	public RoundedButton() {
 		super();

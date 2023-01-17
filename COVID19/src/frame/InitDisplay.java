@@ -8,16 +8,16 @@ import javax.swing.JPanel;
 import utillclass.RoundedButton;
 
 public class InitDisplay {
-	JPanel Init = new JPanel();
-	JPanel buttonPanel = new JPanel();
+	public JPanel Init = new JPanel();
+	private JPanel buttonPanel = new JPanel();
 
-	JLabel title = new JLabel("COVID-19");
-	JLabel subTitle = new JLabel("Information");
+	private JLabel title = new JLabel("COVID-19");
+	private JLabel subTitle = new JLabel("Information");
 
-	RoundedButton join = new RoundedButton("회원가입");
-	RoundedButton login = new RoundedButton("로그인");
+	public RoundedButton join = new RoundedButton("회원가입");
+	public RoundedButton login = new RoundedButton("로그인");
 
-	InitDisplay() {
+	public InitDisplay() {
 
 		Init.setBackground(new Color(28, 228, 251));
 		Init.setLayout(null);

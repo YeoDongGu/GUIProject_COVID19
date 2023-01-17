@@ -19,11 +19,11 @@ import idcheck.NoIdOverlap;
 import utillclass.ConnDB;
 
 public class FirstFrame implements ActionListener {
-	ConnDB cd = new ConnDB();
-	MainFrame mf = new MainFrame();
-	InitDisplay first = new InitDisplay();
-	LoginPanel logindisplay = new LoginPanel();
-	SignupPanel sg = new SignupPanel();
+	private ConnDB cd = new ConnDB();
+	private MainFrame mf = new MainFrame();
+	private InitDisplay first = new InitDisplay();
+	private LoginPanel logindisplay = new LoginPanel();
+	private SignupPanel sg = new SignupPanel();
 	private JFrame sf;
 	private JDialog sud;
 	private JDialog fad;
@@ -36,12 +36,12 @@ public class FirstFrame implements ActionListener {
 	private JLabel lfalog;
 	private JButton falog;
 
-	String myid;
-	String mysido;
-	String mydong;
+	private String myid;
+	private String mysido;
+	private String mydong;
 	private String mypwd;
-	String myrsid;
-	String myname;
+	private String myrsid;
+	private String myname;
 
 	public FirstFrame() {
 		sf = new JFrame();

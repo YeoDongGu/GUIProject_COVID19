@@ -5,8 +5,8 @@ import java.util.*;
 import utillclass.ConnDB;
 
 public class CovidStatMkDb {
-	ConnDB cd = new ConnDB();
-	GetCovidApiData gad = new GetCovidApiData();
+	private ConnDB cd = new ConnDB();
+	private GetCovidApiData gad = new GetCovidApiData();
 
 	public CovidStatMkDb() throws SQLException {
 
@@ -20,12 +20,12 @@ public class CovidStatMkDb {
 							+ "overFlowCnt varchar2(100), " + "qurRate varchar2(100)," + "stdDay varchar2(100)" + ")");
 
 			for (int i = 0; i < cs.size(); i++) {
-				String gubun = cs.get(i).gubun;
-				String incDec = cs.get(i).incDec;
-				String localOccCnt = cs.get(i).localOccCnt;
-				String overFlowCnt = cs.get(i).overFlowCnt;
-				String qurRate = cs.get(i).qurRate;
-				String stdDay = cs.get(i).stdDay;
+				String gubun = cs.get(i).getGubun();
+				String incDec = cs.get(i).getIncDec();
+				String localOccCnt = cs.get(i).getLocalOccCnt();
+				String overFlowCnt = cs.get(i).getOverFlowCnt();
+				String qurRate = cs.get(i).getQurRate();
+				String stdDay = cs.get(i).getStdDay();
 				String cvInsert = "insert into covidstat values(" + "'" + gubun + "','" + incDec + "','" + localOccCnt
 						+ "','" + overFlowCnt + "','" + qurRate + "','" + stdDay + "'" + ")";
 //				System.out.println(cvInsert);
