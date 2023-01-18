@@ -12,10 +12,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-import idcheck.EmptyID;
-import idcheck.IdOverlap;
-import idcheck.NoIdOverlap;
 import utillclass.ConnDB;
 
 public class FirstFrame implements ActionListener {
@@ -24,7 +20,7 @@ public class FirstFrame implements ActionListener {
 	private InitDisplay first = new InitDisplay();
 	private LoginPanel logindisplay = new LoginPanel();
 	private SignupPanel sg = new SignupPanel();
-	private JFrame sf;
+	JFrame sf;
 	private JDialog sud;
 	private JDialog fad;
 	private JPanel p2;
@@ -154,9 +150,22 @@ public class FirstFrame implements ActionListener {
 		} else if (sg.ok.equals(e.getSource())) {
 			if (sg.check == true) {
 				SignupDAO sdao = new SignupDAO();
-				sdao.list(sg.idText.getText(), sg.pwText.getText(), sg.rsidText.getText(), sg.nnText.getText(),
-						(String) sg.comboBox1.getSelectedItem(), (String) sg.comboBox2.getSelectedItem());
+				ArrayList<SignupVo> list = sdao.list(sg.idText.getText(), sg.pwText.getText(), sg.rsidText.getText(),
+						sg.nnText.getText(), (String) sg.comboBox1.getSelectedItem(),
+						(String) sg.comboBox2.getSelectedItem());
 				joinDisplayInit();
+				SignupVo data = null;
+				for (int i = 0; i < list.size(); i++) {
+					data = (SignupVo) list.get(i);
+				}
+				if (data == null) {
+
+				} else {
+					sf.remove(sg.sp);
+					sf.add(first.Init);
+					sf.revalidate();
+					sf.repaint();
+				}
 			} else {
 				JOptionPane.showMessageDialog(null, "아이디 중복확인을 해주세요", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
 			}
@@ -188,7 +197,8 @@ public class FirstFrame implements ActionListener {
 
 		if (id.equals("")) {
 			sg.check = false;
-			new EmptyID();
+			JOptionPane.showMessageDialog(null, "아이디를 입력하세요", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
+			;
 			return;
 		}
 
@@ -203,11 +213,12 @@ public class FirstFrame implements ActionListener {
 			}
 
 			if (getID.equals("")) {
-				new NoIdOverlap();
+				JOptionPane.showMessageDialog(null, "사용가능한 아이디 입니다.");
 				sg.check = true;
 				sg.idText.setEditable(false);
 			} else {
-				new IdOverlap();
+				JOptionPane.showMessageDialog(null, "중복된 아이디가 있습니다", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
+				;
 				sg.check = false;
 			}
 		} catch (SQLException e) {

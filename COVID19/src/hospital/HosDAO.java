@@ -2,11 +2,9 @@ package hospital;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-import frame.LoginDAO;
 import utillclass.ConnDB;
 
-public class HosDAO extends LoginDAO {
+public class HosDAO {
 	ConnDB cd = new ConnDB();
 
 	public ArrayList<HosVO> listSido() throws SQLException, ClassNotFoundException {

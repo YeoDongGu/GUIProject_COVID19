@@ -26,6 +26,10 @@ import whether.WhetherPanel;
  */
 public class MainFrame implements ActionListener {
 	ConnDB cd = new ConnDB();
+	WhetherPanel w;
+	HosPanel h;
+	NewsPanel n;
+	CovidstatPanel cs;
 	protected JTabbedPane t;
 	private JMenuBar mb;
 	private JMenu update;
@@ -93,10 +97,10 @@ public class MainFrame implements ActionListener {
 	}
 
 	public void startframe() throws ClassNotFoundException, SQLException {
-		WhetherPanel w = new WhetherPanel();
-		HosPanel h = new HosPanel();
-		NewsPanel n = new NewsPanel();
-		CovidstatPanel cs = new CovidstatPanel();
+		w = new WhetherPanel();
+		h = new HosPanel();
+		n = new NewsPanel();
+		cs = new CovidstatPanel();
 		h.set(id, pwd, sido, dong);
 
 		if (sido.equals("경북")) {
