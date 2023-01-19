@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 import utillclass.ConnDB;
 
 public class SignupDAO {
-	FirstFrame ff = new FirstFrame();
 	ConnDB cd = new ConnDB();
 
 	public ArrayList<SignupVo> list(String id, String pwd, String resi, String name, String sido, String dong) {

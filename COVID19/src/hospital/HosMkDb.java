@@ -14,9 +14,9 @@ public class HosMkDb {
 		gad.getApiData();
 		hv = gad.hosvo;
 		try {
-			cd.stmt.executeUpdate("drop table Covid");
-			cd.stmt.executeUpdate("create table Covid(" + "sidoNm varchar2(100), " + "sgguNm varchar2(100), "
-					+ "yadmNm varchar2(100), " + "telno varchar2(100) " + ")");
+			cd.stmt.executeUpdate("delete Covid");
+//			cd.stmt.executeUpdate("create table Covid(" + "sidoNm varchar2(100), " + "sgguNm varchar2(100), "
+//					+ "yadmNm varchar2(100), " + "telno varchar2(100) " + ")");
 
 			for (int i = 0; i < hv.size(); i++) {
 				String sidoNm = hv.get(i).getSidonm();

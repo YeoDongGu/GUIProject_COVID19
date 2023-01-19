@@ -13,11 +13,11 @@ public class CovidStatMkDb {
 		gad.getApiData();
 		ArrayList<CovidStat> cs = gad.covidstat;
 		try {
-			cd.stmt.executeUpdate("drop table covidstat");
+			cd.stmt.executeUpdate("delete covidstat");
 
-			cd.stmt.executeUpdate(
-					"create table covidstat(" + "gubun varchar2(100), " + "incDec int, " + "localOccCnt varchar2(100), "
-							+ "overFlowCnt varchar2(100), " + "qurRate varchar2(100)," + "stdDay varchar2(100)" + ")");
+//			cd.stmt.executeUpdate(
+//					"create table covidstat(" + "gubun varchar2(100), " + "incDec int, " + "localOccCnt varchar2(100), "
+//							+ "overFlowCnt varchar2(100), " + "qurRate varchar2(100)," + "stdDay varchar2(100)" + ")"); // 테이블 생성
 
 			for (int i = 0; i < cs.size(); i++) {
 				String gubun = cs.get(i).getGubun();

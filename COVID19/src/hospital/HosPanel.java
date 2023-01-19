@@ -19,14 +19,12 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
-
-import frame.MainFrame;
 import utillclass.ConnDB;
 /*
  코로나 병원 정보 패널
  */
 public class HosPanel implements MouseListener, ActionListener {
-	MainFrame mf = new MainFrame();
+//	MainFrame mf = new MainFrame();
 	private JList<String> list;
 	public JPanel hp;
 	public JPanel ctp;

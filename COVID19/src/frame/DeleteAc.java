@@ -19,7 +19,6 @@ import utillclass.RoundedButton;
 
 public class DeleteAc implements ActionListener {
 	private ConnDB cd = new ConnDB();
-	private MainFrame mf = new MainFrame();
 	private JFrame delac;
 	private JLabel lid = new JLabel("접속중인 ID");
 	private JLabel lpassword = new JLabel("PASSWORD");
@@ -115,6 +114,7 @@ public class DeleteAc implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
 		if (del.equals(e.getSource())) {
 			if (idText.getText().equals(id) && pwText.getText().equals(pwd) && rsidText.getText().equals(rsid)) {
 				String sql1 = "delete from favorites where id = '" + id + "'";
@@ -141,6 +141,7 @@ public class DeleteAc implements ActionListener {
 		} else if (cancel.equals(e.getSource())) {
 			delac.dispose();
 			try {
+				MainFrame mf = new MainFrame();
 				mf.set(id, pwd, name, rsid, sido, dong);
 				mf.startframe();
 			} catch (ClassNotFoundException | SQLException e1) {

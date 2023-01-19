@@ -14,13 +14,13 @@ public class WhetherMkDb {
 		ArrayList<WhetherVO> wh = gad.whethervo;
 		try {
 
-			cd.stmt.executeUpdate("drop table Whether");
-			cd.stmt.executeUpdate("create table Whether(" + "sidoNm varchar2(100), " + "stationName varchar2(100), "
-					+ "pm10Value varchar2(100), " + "pm25Value varchar2(100)," + "no2Value varchar2(100), "
-					+ "o3Value varchar2(100), " + "coValue varchar2(100), " + "so2Value varchar2(100),"
-					+ "pm10Grade varchar2(100)," + "pm25Grade varchar2(100)," + "no2Grade varchar2(100),"
-					+ "o3Grade varchar2(100)," + "coGrade varchar2(100)," + "so2Grade varchar2(100),"
-					+ "datatime varchar2(100)" + ")");
+			cd.stmt.executeUpdate("delete Whether");
+//			cd.stmt.executeUpdate("create table Whether(" + "sidoNm varchar2(100), " + "stationName varchar2(100), "
+//					+ "pm10Value varchar2(100), " + "pm25Value varchar2(100)," + "no2Value varchar2(100), "
+//					+ "o3Value varchar2(100), " + "coValue varchar2(100), " + "so2Value varchar2(100),"
+//					+ "pm10Grade varchar2(100)," + "pm25Grade varchar2(100)," + "no2Grade varchar2(100),"
+//					+ "o3Grade varchar2(100)," + "coGrade varchar2(100)," + "so2Grade varchar2(100),"
+//					+ "datatime varchar2(100)" + ")");
 
 			for (int i = 0; i < wh.size(); i++) {
 				String sidoNm = wh.get(i).sidoName;
