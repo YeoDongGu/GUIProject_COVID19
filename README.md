@@ -1,6 +1,6 @@
 
 # JAVA(자바) 기반 응용 SW엔지니어링 개발자 취업과정 22.10.25 ~ 23.04.13  ![version](https://img.shields.io/badge/feat.-%EA%B9%80%ED%98%B8%EC%A4%80%20%EA%B5%90%EC%88%98%EB%8B%98-green)
-https://img.shields.io/badge/label-message-white
+<img src ="https://img.shields.io/badge/label-message-white"/>
 교육 과정 중 앞서 2개월간 배운 자바, 데이터베이스 를 사용해서 GUI로 구현하는 프로젝트를 4주동안 진행  22.12.22~ 23.01.20
 <br/><br/>
 
